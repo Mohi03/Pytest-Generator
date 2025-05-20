@@ -10,7 +10,7 @@ CORS(app)
 @app.route('/', methods=['GET', 'POST'])
 def get_acceptance_criteria():
     if request.method == 'GET':
-        return "Flask app is running. Send a POST request with a user story or scenarios."
+        return render_template('index.html')
 
     # Handle POST request
     data = request.get_json()
