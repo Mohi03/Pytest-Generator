@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/gene', methods=['POST'])
+@app.route('/', methods=['POST'])
 def get_acceptance_criteria():
     data = request.json
     userStory = data.get("userStory")
