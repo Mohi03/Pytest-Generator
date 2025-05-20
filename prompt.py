@@ -7,12 +7,11 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['POST'])
 def get_acceptance_criteria():
-    if request.method == 'GET':
-        return render_template('index.html')
+    
+    render_template('index.html')
 
-    # Handle POST request
     data = request.get_json()
     userStory = data.get("userStory")
     scenarios = data.get("scenarios", [])  # Default to empty list if not provided
