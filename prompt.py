@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/main', methods=['GET','POST'])
 def get_acceptance_criteria():
     if request.method == 'GET':
         return render_template("main.html")
