@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         generateBtn.disabled = true;
         
         // Initial call to get scenarios
-        fetch('http://127.0.0.1:5000/', {
+        fetch('http://127.0.0.1:5000/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmLoadingIndicator.classList.remove('hidden');
         
         // Send scenarios for test generation
-        fetch('http://127.0.0.1:5000/', {
+        fetch('http://127.0.0.1:5000/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
