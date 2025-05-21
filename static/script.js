@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         generateBtn.disabled = true;
         
         // Initial call to get scenarios
-        fetch('https://pytest-generator.up.railway.app/', {
+        fetch('https://pytest-generator-production.up.railway.app/main', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmLoadingIndicator.classList.remove('hidden');
         
         // Send scenarios for test generation
-        fetch('https://pytest-generator.up.railway.app/', {
+        fetch('https://pytest-generator-production.up.railway.app/main', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
