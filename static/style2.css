@@ -6,7 +6,6 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
-    -webkit-text-size-adjust: 100%; /* Prevent font size adjustments on mobile */
 }
 
 .container {
@@ -16,21 +15,21 @@ body {
 }
 
 .section {
-    padding: 80px 0; /* Adjust padding for smaller screens */
+    padding: 100px 0;
     text-align: center;
 }
 
 .section-subheading {
     color: #777;
-    font-size: 1.1rem; /* Adjust font size for smaller screens */
-    margin-bottom: 40px; /* Adjust margin for smaller screens */
+    font-size: 1.2rem;
+    margin-bottom: 60px;
     text-align: center;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 25px; /* Adjust margin for smaller screens */
-    font-size: 1.8rem; /* Adjust font size for smaller screens */
+    margin-bottom: 30px;
+    font-size: 2.2rem;
     color: #222;
 }
 
@@ -41,7 +40,7 @@ body {
 /* New Header */
 .new-header {
     background-color: #fff;
-    padding: 20px 0; /* Adjust padding for smaller screens */
+    padding: 30px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
@@ -58,12 +57,12 @@ body {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
     letter-spacing: 0.1em;
 }
 
 .logo-part {
-    padding: 6px 10px; /* Adjust padding for smaller screens */
+    padding: 8px 12px;
 }
 
 .logo .blue-bg {
@@ -81,48 +80,31 @@ body {
     border-left: 1px solid #3498db;
 }
 
-.new-header nav {
-    display: none; /* Hide navigation by default on smaller screens */
+.new-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.new-header .button {
-    font-size: 0.9rem; /* Adjust button font size for smaller screens */
-    padding: 10px 18px; /* Adjust button padding for smaller screens */
+.new-header nav ul li {
+    margin-left: 30px;
 }
 
-/* Hamburger Menu (for smaller screens) */
-.hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
+.new-header nav ul li a {
+    text-decoration: none;
     color: #555;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
 }
 
-.new-header nav.open {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    text-align: center;
-}
-
-.new-header nav.open ul {
-    flex-direction: column;
-    align-items: center;
-}
-
-.new-header nav.open ul li {
-    margin: 10px 0;
-    margin-left: 0;
+.new-header nav ul li a:hover {
+    color: #3498db;
 }
 
 /* Hero Section New - IMPROVED */
 .hero-section-new {
-    padding: 120px 0; /* Adjust padding for smaller screens */
+    padding: 180px 0;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -134,112 +116,106 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 2.4rem; /* Adjust font size for smaller screens */
+    font-size: 3.2rem;
     font-weight: 800;
     color: #222;
-    margin-bottom: 25px; /* Adjust margin for smaller screens */
-    line-height: 1.4;
+    margin-bottom: 35px;
+    line-height: 1.3;
 }
 
 .hero-text p {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
     color: #555;
-    line-height: 1.6;
-    margin-bottom: 35px; /* Adjust margin for smaller screens */
+    line-height: 1.7;
+    margin-bottom: 45px;
 }
 
 .hero-actions {
     display: flex;
-    flex-direction: column; /* Stack buttons on smaller screens */
-    align-items: center;
-    gap: 15px; /* Adjust gap for smaller screens */
-}
-
-.hero-actions .button {
-    font-size: 1rem; /* Adjust button font size for smaller screens */
-    padding: 12px 25px; /* Adjust button padding for smaller screens */
-    width: 100%; /* Make buttons full width on smaller screens */
+    justify-content: center;
+    gap: 25px;
 }
 
 /* Features Section - Enhanced Professional Look */
 .features-section {
-    padding: 60px 0; /* Adjust padding for smaller screens */
+    padding: 100px 0;
     text-align: center;
     background-color: #f9f9f9; /* Light background for the section */
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust min-width for smaller screens */
-    gap: 20px; /* Adjust gap for smaller screens */
-    margin-top: 30px; /* Adjust margin for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Wider min-width for more content space */
+    gap: 40px; /* Increased gap for better spacing */
+    margin-top: 40px;
 }
 
 .feature-item.enhanced {
     background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    padding: 20px; /* Adjust padding for smaller screens */
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); /* Softer, wider shadow */
+    padding: 40px;
     text-align: left;
     display: flex;
-    align-items: flex-start;
-    gap: 15px; /* Adjust gap for smaller screens */
-    border-left: 4px solid #3498db; /* Adjust border width for smaller screens */
-    transition: box-shadow 0.3s ease-in-out;
+    align-items: center; /* Center icon and text vertically */
+    gap: 30px; /* More space between icon and text */
+    border-left: 6px solid #3498db; /* Prominent left border as accent */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .feature-item.enhanced:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item.enhanced .icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px; /* Adjust icon size for smaller screens */
-    height: 30px; /* Adjust icon size for smaller screens */
-    background-color: #e7f5ff;
+    width: 60px; /* Slightly larger icon */
+    height: 60px; /* Slightly larger icon */
+    background-color: #fff; /* White background for the icon container */
     color: #3498db;
-    border-radius: 6px;
-    font-size: 1rem; /* Adjust icon font size for smaller screens */
+    border-radius: 50%; /* Circular icon container */
+    font-size: 1.8rem;
+    border: 2px solid #3498db; /* Blue border for the icon */
     flex-shrink: 0;
 }
 
 .feature-item.enhanced .feature-text h3 {
-    font-size: 1.2rem; /* Adjust heading font size for smaller screens */
+    font-size: 1.8rem; /* More prominent heading */
     color: #333;
-    margin-bottom: 8px; /* Adjust margin for smaller screens */
-    font-weight: 600;
+    margin-bottom: 12px;
+    font-weight: 700; /* Bolder heading */
 }
 
 .feature-item.enhanced .feature-text p {
-    font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
-    color: #666;
-    line-height: 1.6;
+    font-size: 1.15rem; /* Slightly larger paragraph */
+    color: #555;
+    line-height: 1.8; /* More generous line height */
 }
 
 /* Pricing Section Adjustments (Pro Card Specific) */
 .pricing-section {
-    padding: 80px 0; /* Adjust padding for smaller screens */
+    padding: 120px 0;
     text-align: center;
 }
 
 .pricing-cards-container {
     display: flex;
-    flex-direction: column; /* Stack cards on smaller screens */
-    align-items: center;
-    gap: 20px; /* Adjust gap for smaller screens */
-    margin-top: 30px; /* Adjust margin for smaller screens */
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .pricing-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px; /* Adjust padding for smaller screens */
-    width: 90%; /* Make cards wider on smaller screens */
-    max-width: 400px; /* Limit max width */
+    padding: 40px;
+    width: 320px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: 1px solid #eee;
@@ -248,22 +224,22 @@ body {
 }
 
 .pricing-card:hover {
-    transform: translateY(-4px); /* Less lift on smaller screens */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Smaller shadow on smaller screens */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card h3 {
     color: #3498db;
-    font-size: 1.6rem; /* Adjust font size for smaller screens */
-    margin-bottom: 15px; /* Adjust margin for smaller screens */
+    font-size: 2rem;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
 .pricing-card .price {
-    font-size: 1.4rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 25px; /* Adjust margin for smaller screens */
+    margin-bottom: 30px;
 }
 
 .pricing-card .features-list {
@@ -273,64 +249,66 @@ body {
 }
 
 .pricing-card .features-list li {
-    padding: 10px 0; /* Adjust padding for smaller screens */
+    padding: 12px 0;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem; /* Adjust font size for smaller screens */
+    font-size: 1.1rem;
     color: #555;
 }
 
+.pricing-card .features-list li:last-child {
+    border-bottom: none;
+}
+
 .pricing-card .button {
-    margin-top: 20px; /* Adjust margin for smaller screens */
-    font-size: 0.9rem; /* Adjust button font size for smaller screens */
-    padding: 10px 20px; /* Adjust button padding for smaller screens */
+    margin-top: 30px;
 }
 
 /* Improved CTA Section (Below Pricing) */
 .cta-section-improved {
     background-color: #e9ecef;
-    padding: 80px 0; /* Adjust padding for smaller screens */
+    padding: 100px 0;
     text-align: center;
 }
 
 .cta-container-improved {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .cta-content h2 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
+    font-size: 2.8rem;
     color: #333;
     font-weight: 700;
-    margin-bottom: 15px; /* Adjust margin for smaller screens */
-    line-height: 1.4;
+    margin-bottom: 20px;
+    line-height: 1.3;
 }
 
 .cta-content p {
-    font-size: 1.1rem; /* Adjust font size for smaller screens */
+    font-size: 1.6rem;
     color: #555;
-    line-height: 1.6;
-    margin-bottom: 25px; /* Adjust margin for smaller screens */
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 .cta-buttons {
     display: flex;
-    flex-direction: column; /* Stack buttons on smaller screens */
-    align-items: center;
-    gap: 15px; /* Adjust gap for smaller screens */
+    justify-content: center;
+    gap: 20px;
 }
 
-.cta-buttons .button {
-    font-size: 1rem; /* Adjust button font size for smaller screens */
-    padding: 12px 25px; /* Adjust button padding for smaller screens */
-    width: 100%; /* Make buttons full width on smaller screens */
+.cta-button-primary,
+.cta-button-secondary {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
 }
 
 /* New Footer - ADJUSTED */
 .new-footer {
     background-color: #343a40;
     color: #f8f9fa;
-    padding: 30px 0; /* Adjust padding for smaller screens */
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -345,28 +323,22 @@ body {
 }
 
 .footer-container p {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .footer-container nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0; /* Adjust margin for smaller screens */
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Stack links on smaller screens */
-    align-items: center;
-    gap: 10px; /* Adjust gap for smaller screens */
-}
-
-.footer-container nav ul li {
-    margin-left: 0;
+    gap: 20px;
 }
 
 .footer-container nav ul li a {
     text-decoration: none;
     color: #ccc;
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    font-size: 1rem;
     transition: color 0.3s ease-in-out;
 }
 
@@ -377,12 +349,12 @@ body {
 /* Buttons (consistent style) */
 .button {
     display: inline-block;
-    padding: 12px 25px; /* Adjust default button padding for smaller screens */
+    padding: 14px 30px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-size: 0.9rem; /* Adjust default button font size for smaller screens */
+    font-size: 1.1rem;
     text-align: center;
     border: 2px solid transparent;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -412,56 +384,101 @@ body {
 }
 
 .button.large {
-    padding: 16px 35px; /* Adjust large button padding for smaller screens */
-    font-size: 1rem; /* Adjust large button font size for smaller screens */
+    padding: 18px 40px;
+    font-size: 1.2rem;
     border-radius: 10px;
 }
 
-/* Utility Class for Centering Text */
-.centered {
-    text-align: center;
-}
-
-/* Media Query for Smaller Screens (up to 767px) */
-@media (max-width: 767px) {
-    .section {
-        padding: 60px 0;
-    }
-
-    .section-subheading {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-
-    .new-header .header-container {
-        flex-direction: column; /* Stack logo and nav on smaller screens */
+@media (max-width: 768px) {
+    .header-container,
+    .hero-actions,
+    .cta-buttons,
+    .footer-container nav ul {
+        flex-direction: column;
         align-items: center;
-    }
-
-    .new-header .logo {
-        margin-bottom: 15px;
     }
 
     .new-header nav ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 15px;
+        gap: 15px;
     }
 
     .new-header nav ul li {
         margin-left: 0;
-        margin-bottom: 10px;
     }
 
     .hero-section-new {
-        padding: 100px 0;
+        padding: 100px 20px;
     }
 
     .hero-text h1 {
         font-size: 2rem;
-        margin-bottom: 2
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item.enhanced {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .feature-item.enhanced .feature-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item.enhanced .feature-text p {
+        font-size: 1rem;
+    }
+
+    .pricing-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 90%;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-container nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section,
+    .features-section,
+    .pricing-section,
+    .cta-section-improved {
+        padding: 60px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subheading {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+}
