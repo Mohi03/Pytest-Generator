@@ -10,7 +10,7 @@ CORS(app)
 @app.route('/', methods=['GET','POST'])
 def get_acceptance_criteria():
     if request.method == 'GET':
-        return render_template("index.html")
+        return render_template("main.html")
     data = request.get_json()
     userStory = data.get("userStory")
     scenarios = data.get("scenarios", [])  # Default to empty list if not provided
