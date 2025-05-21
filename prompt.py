@@ -6,6 +6,9 @@ from google.genai import types
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def main_page():
+    return render_template("index.html")
 
 @app.route('/main', methods=['GET','POST'])
 def get_acceptance_criteria():
