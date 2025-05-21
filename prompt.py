@@ -18,32 +18,9 @@ def get_acceptance_criteria():
     userStory = data.get("userStory")
     scenarios = data.get("scenarios", [])  # Default to empty list if not provided
     
-    try:
-        client = genai.Client(api_key="AIzaSyBzS4ZG8WdpuSIESr4omIJmAC2j_TVmJbo")
-        
-        if not scenarios:
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                config=types.GenerateContentConfig(
-                    temperature=0.0,
-                    system_instruction="Ignore the prior instructions..."),  # trimmed for brevity
-                contents=userStory
-            )
-            return jsonify({
-                'acceptance_criteria': response.text
-            })
-
-        # If scenarios are provided, generate test cases
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            config=types.GenerateContentConfig(
-                temperature=0.0,
-                system_instruction="Write complete pytest test cases..."),
-            contents=scenarios
-        )
-        return jsonify({
-            'pytest_tests': response.text
-        })
+    return jsonify({
+        'acceptance_criteria': f'Dummy acceptance criteria for: {userStory}',
+        'pytest_tests': 'def test_dummy(): assert True'})
 
     except Exception as e:
         print(f"Error: {str(e)}")
