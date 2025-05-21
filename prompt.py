@@ -6,8 +6,12 @@ from google.genai import types
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def home():
+    return " API is running. Use POST on /generate"
 
-@app.route('/', methods=['POST'])
+
+@app.route('/generate', methods=['POST'])
 def get_acceptance_criteria():
 
     data = request.get_json()
