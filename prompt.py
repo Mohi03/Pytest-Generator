@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
 def get_acceptance_criteria():
     
     render_template('index.html')
