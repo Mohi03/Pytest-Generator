@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request , render_template
+from flask import Flask, jsonify, request 
 from flask_cors import CORS
 from google import genai
 from google.genai import types
@@ -9,8 +9,6 @@ CORS(app)
 
 @app.route('/', methods=['POST'])
 def get_acceptance_criteria():
-    
-    render_template('index.html')
 
     data = request.get_json()
     userStory = data.get("userStory")
