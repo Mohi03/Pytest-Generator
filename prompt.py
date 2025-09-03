@@ -19,7 +19,7 @@ def get_acceptance_criteria():
     scenarios = data.get("scenarios", [])  # Default to empty list if not provided
         
     try:
-        client = genai.Client(api_key="AIzaSyBzS4ZG8WdpuSIESr4omIJmAC2j_TVmJbo")  
+        client = genai.Client(api_key="AIzaSyDFAt5HhPBn7Pgqt_bID1TYyovK1z7Isyw")  
             
         # If scenarios is empty, generate acceptance criteria
         if not scenarios:
@@ -53,3 +53,4 @@ def get_acceptance_criteria():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
