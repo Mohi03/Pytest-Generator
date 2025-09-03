@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         generateBtn.disabled = true;
         
         // Initial call to get scenarios
-        fetch('https://dev-lab.fun/main', {
+        fetch('https://pytest-generator.onrender.com/main', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
